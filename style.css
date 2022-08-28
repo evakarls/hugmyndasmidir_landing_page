@@ -1,0 +1,290 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffbe2f;
+  color: #3d3d3d;
+  font-family: "Anek Telugu", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 100%;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+  line-height: 120%;
+  font-weight: 200;
+}
+
+.invert-text {
+  color: white;
+}
+
+/* CONTAINERS  */
+
+.container {
+  margin: auto;
+  width: 80%;
+  display: flex;
+}
+
+.container-col {
+  flex-direction: column;
+}
+
+.container-row {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-container {
+  padding: 4rem 0;
+}
+
+.intro-container {
+  height: 100%;
+  padding-top: 4rem;
+}
+
+.intro-text-container {
+  width: 50%;
+}
+.intro-text-container p {
+  font-size: 3.5rem;
+  line-height: 100%;
+  font-weight: 200;
+  color: #3d3d3d;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.content-center {
+  align-items: center;
+}
+
+.content-section {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  position: relative;
+}
+
+.social-media-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.green-block {
+  background-color: white;
+}
+.blue-block {
+  background-color: #398fa0;
+}
+
+/* IMAGE */
+
+.image-container {
+  position: absolute;
+  width: 40%;
+  padding-bottom: 2rem;
+  bottom: 4rem;
+  right: 0;
+}
+
+.image {
+  width: 80%;
+}
+
+/* NAVBAR  */
+.navbar {
+  width: 100%;
+  display: flex;
+  background-color: #ffbe2f;
+  padding: 2rem 0;
+  z-index: 10;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+.navbar-item {
+  text-decoration: none;
+}
+
+navbar-item:hover {
+  font-weight: 700;
+}
+
+/* AVATAR */
+
+.avatar-banner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 4rem;
+  height: fit-content;
+  flex-wrap: wrap;
+  animation-duration: 2s;
+}
+.avatar {
+  width: 34rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.avatar p {
+  font-size: 1.2rem;
+}
+.avatar-image {
+  width: 40%;
+  height: 40%;
+}
+
+/* ANIMATIONS  */
+
+.scrollable {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.scrollable.scrolled {
+  opacity: 1;
+}
+
+.fade-in {
+  animation: fade-in 1.4s ease-in-out both;
+}
+
+.text-shadow-pop-bl {
+  color: white;
+  -webkit-animation: text-shadow-pop-bl 0.6s both;
+  animation: text-shadow-pop-bl 0.6s both;
+}
+
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 2s 0.5s both;
+
+  animation: tracking-in-expand 2s 0.5s both;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  .scrollable {
+    opacity: 1;
+  }
+  .scrolled {
+    animation: none !important;
+  }
+}
+
+@-webkit-keyframes text-shadow-pop-bl {
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555,
+      0 0 #555555, 0 0 #555555, 0 0 #555555;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px 1px #555555, -2px 2px #555555, -3px 3px #555555,
+      -4px 4px #555555, -5px 5px #555555, -6px 6px #555555, -7px 7px #555555,
+      -8px 8px #555555;
+    -webkit-transform: translateX(8px) translateY(-8px);
+    transform: translateX(8px) translateY(-8px);
+  }
+}
+@keyframes text-shadow-pop-bl {
+  0% {
+    text-shadow: 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555, 0 0 #555555,
+      0 0 #555555, 0 0 #555555, 0 0 #555555;
+    -webkit-transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    text-shadow: -1px 1px #555555, -2px 2px #555555, -3px 3px #555555,
+      -4px 4px #555555, -5px 5px #555555, -6px 6px #555555, -7px 7px #555555,
+      -8px 8px #555555;
+    -webkit-transform: translateX(8px) translateY(-8px);
+    transform: translateX(8px) translateY(-8px);
+  }
+}
+
+/* MEDIA QUERIES  */
+@media only screen and (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 100%;
+    margin: 3rem auto 1rem auto;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p,
+  a {
+    font-size: 1rem;
+  }
+
+  .avatar-banner {
+    gap: 2rem;
+  }
+
+  .avatar {
+    gap: 1.5rem;
+  }
+
+  .avatar p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .avatar h3 {
+    margin: 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .content-container {
+    padding-top: 3rem;
+  }
+
+  .content-section {
+    min-height: 60vh;
+  }
+
+  .image-container {
+    padding-bottom: 0;
+    bottom: 1rem;
+  }
+
+  .intro-container {
+    padding-top: 0;
+  }
+
+  .intro-text-container {
+    width: 100%;
+  }
+  .intro-text-container p {
+    font-size: 1.6rem;
+    margin: 1rem auto;
+  }
+}
