@@ -104,11 +104,21 @@ ul h3 {
   flex-direction: column;
   justify-content: center;
 }
-.intro-text-container p {
+.intro-text-container h2 {
   font-size: 3.4rem;
-  line-height: 100%;
+  line-height: 120%;
   font-weight: 200;
   color: #3d3d3d;
+  text-transform: none;
+}
+
+.intro-text-container h3 {
+  font-size: 1.5rem;
+  line-height: 120%;
+  font-weight: 200;
+  color: #3d3d3d;
+  text-transform: none;
+  margin-bottom: 1rem;
 }
 
 .content-left {
@@ -123,6 +133,7 @@ ul h3 {
 
 .text-image-container {
   height: 75vh;
+  max-height: 785px;
   width: 100vw;
 }
 
@@ -148,21 +159,21 @@ ul h3 {
 /* IMAGE */
 
 .centered {
-  width: 40%;
   height: 100%;
+  width: 40%;
+  background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
 
 .image-container {
-  position: absolute;
+  padding-top: 2rem;
   width: 33%;
-  bottom: 6rem;
-  right: 0;
+  place-self: flex-end;
 }
 
 .image {
-  width: 75%;
+  width: 100%;
 }
 
 /* NAVBAR  */
@@ -180,7 +191,7 @@ ul h3 {
 }
 
 .text-container {
-  width: 60%;
+  width: 50%;
   height: fit-content;
   padding: 4rem 4rem 4rem 10vw;
 }
@@ -325,6 +336,60 @@ navbar-item:hover {
 }
 
 /* MEDIA QUERIES  */
+
+@media only screen and (max-width: 1500px) {
+  .centered {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .centered {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .intro-text-container {
+    height: 25vh;
+  }
+
+  .centered {
+    height: 0;
+    width: 0;
+    display: none;
+  }
+
+  .intro-text-container h2 {
+    font-size: 2rem;
+  }
+
+  .intro-text-container h3 {
+    font-size: 1rem;
+  }
+  .text-container {
+    width: 50%;
+    height: fit-content;
+    padding: 1rem 1rem 4rem 10vw;
+  }
+
+  .text-image-container {
+    height: fit-content;
+  }
+  /* .content-section {
+    min-height: 0;
+    max-height: 750px;
+  } */
+}
+
+@media screen and (max-width: 900px), screen and (min-height: 700px) {
+  .intro-text-container {
+    height: 33vh;
+  }
+
+  .content-section {
+    min-height: fit-content;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   h1 {
     font-size: 2rem;
@@ -358,9 +423,6 @@ navbar-item:hover {
 
   .navbar {
     padding: 1rem 0;
-  }
-  .centered {
-    display: none;
   }
 
   .hero-heading {
@@ -452,8 +514,13 @@ navbar-item:hover {
     width: 100%;
     height: 25vh;
   }
-  .intro-text-container p {
+  .intro-text-container h2 {
     font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .intro-text-container h3 {
+    font-size: 0.8rem;
   }
 }
 
