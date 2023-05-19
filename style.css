@@ -120,6 +120,31 @@ ul h3 {
   text-transform: none;
   margin-bottom: 1rem;
 }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.grid-text {
+  grid-column: span 2 / span 2;
+}
+
+.grid-image {
+  grid-column: span 1 / span 1;
+  object-fit: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-image img {
+  max-width: 100%;
+}
+
+.small-screen-image {
+  display: none;
+}
 
 .content-left {
   display: flex;
@@ -269,6 +294,17 @@ navbar-item:hover {
   align-items: flex-end;
 }
 
+/* LISTS  */
+
+.content-list {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.long-heading {
+  width: 100%;
+}
 /* ANIMATIONS  */
 
 .scrollable {
@@ -350,6 +386,18 @@ navbar-item:hover {
 @media only screen and (max-width: 900px) {
   .intro-text-container {
     height: 25vh;
+  }
+
+  .full-screen-image {
+    display: none;
+  }
+
+  .grid-text {
+    grid-column: span 3 / span 3;
+  }
+
+  .content-list {
+    font-size: 1rem;
   }
 
   .centered {
@@ -525,6 +573,9 @@ navbar-item:hover {
 }
 
 @media only screen and (max-width: 500px) {
+  .small-screen-image {
+    display: block;
+  }
   .content-section {
     min-height: 40vh;
   }
