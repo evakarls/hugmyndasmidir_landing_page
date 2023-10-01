@@ -80,6 +80,18 @@ ul h3 {
   display: flex;
 }
 
+.flex-container {
+  display: flex;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  gap: 0.5em 1.5em;
+  font-size: 0.85em;
+}
 .container-col {
   flex-direction: column;
 }
@@ -386,6 +398,16 @@ navbar-item:hover {
 @media only screen and (max-width: 900px) {
   .intro-text-container {
     height: 25vh;
+  }
+
+  .list-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5em 1.5em;
+    font-size: 0.85em;
+  }
+  .list-container-small {
+    grid-template-columns: 1fr;
   }
 
   .full-screen-image {
