@@ -72,6 +72,12 @@ ul h3 {
   place-self: center;
 }
 
+.hero-subheading-left {
+  width: fit-content;
+  place-self: start;
+  margin: 0.3em 0;
+}
+
 /* CONTAINERS  */
 
 .container {
@@ -205,12 +211,14 @@ ul h3 {
 
 .image-container {
   padding-top: 2rem;
-  width: 33%;
-  place-self: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3em;
 }
 
 .image {
-  width: 100%;
+  width: 30%;
 }
 
 /* NAVBAR  */
@@ -499,10 +507,15 @@ navbar-item:hover {
     left: 0rem;
   }
 
-  /* .hero-subheading {
+  .hero-subheading {
     width: fit-content;
     place-self: center;
-  } */
+  }
+
+  .hero-subheading-left {
+    width: fit-content;
+    place-self: start;
+  }
 
   .avatar-banner {
     gap: 2rem;
@@ -572,8 +585,14 @@ navbar-item:hover {
   }
 
   .image-container {
+    flex-direction: column;
     padding-bottom: 0;
     bottom: 1rem;
+  }
+
+  .image {
+    width: 50%;
+    place-self: flex-end;
   }
 
   .intro-container {
